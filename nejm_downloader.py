@@ -313,7 +313,6 @@ class NEJMDownloader:
         Returns:
             Dictionary with JSON output
         """
-        print(f"NEJM-Challenge: {self.challenge_id}")
 
         # Download questions
         self.download_questions()

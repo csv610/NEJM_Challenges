@@ -16,6 +16,7 @@ import os
 import time
 from datetime import datetime, timedelta
 from typing import List, Tuple, Optional
+from tqdm import tqdm
 from nejm_downloader import NEJMDownloader
 
 
@@ -157,9 +158,6 @@ def merge_challenge_data(downloaded: dict, existing_data: dict) -> dict:
         # Keep answer from existing data if available
         if existing.get("answer"):
             downloaded["answer"] = existing.get("answer")
-        # Keep image path from existing if available
-        if existing.get("image"):
-            downloaded["image"] = existing.get("image")
 
     return downloaded
 
@@ -201,9 +199,9 @@ def batch_download(dates: List[datetime], output_file: str = "nejm_questions.jso
         else:
             to_download.append(challenge_id)  # Not in existing data, download
 
-    # Process downloads silently
-    for challenge_id in to_download:
-        print(challenge_id, end=' ', flush=True)
+
+    # Process downloads with progress bar
+    for challenge_id in tqdm(to_download, desc="Downloading challenges"):
         downloaded = download_challenge(challenge_id, temp_dir)
 
         if downloaded:

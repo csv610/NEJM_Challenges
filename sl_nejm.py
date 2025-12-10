@@ -196,7 +196,7 @@ def main():
         st.error("OpenAI API key not found. Please set the OPENAI_API_KEY environment variable.")
         return
 
-    json_file = "nejm.json"
+    json_file = "nejm_questions.json"
     questions = load_data(json_file)
     total_questions = len(questions)
 
