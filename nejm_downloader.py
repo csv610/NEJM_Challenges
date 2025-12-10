@@ -236,8 +236,6 @@ class NEJMDownloader:
             Tuple of (question_text, options_dict)
         """
         url = f"https://www.nejm.org/image-challenge?ci={self.challenge_id}&startFrom=41&startPage=3"
-        print(f"Fetching question from: {url}")
-
         soup = self._fetch_page_soup(url)
 
         # Try HTML-based extraction first (more reliable)
@@ -266,17 +264,14 @@ class NEJMDownloader:
 
         # Download PPTX
         pptx_url = f"https://csvc.nejm.org/ContentServer/images?id=IC{self.challenge_id}&format=pptx"
-        print(f"\nDownloading PPTX from: {pptx_url}")
-
         pptx_response = self.scraper.get(pptx_url, headers=self.headers)
         pptx_response.raise_for_status()
 
-        with open(self.pptx_path, "wb") as f:
+        # Write PPTX to file
+        with open(self.pptx_path, 'wb') as f:
             f.write(pptx_response.content)
-        print(f"Saved PPTX to: {self.pptx_path}")
 
         # Extract images from PPTX
-        print("\nExtracting images from PPTX...")
         extracted_files = []
         with zipfile.ZipFile(self.pptx_path, "r") as z:
             for file in z.namelist():
@@ -287,19 +282,15 @@ class NEJMDownloader:
                     with open(img_path, "wb") as img_file:
                         img_file.write(img_data)
                     extracted_files.append((img_name, img_path))
-                    print(f"Extracted: {img_name}")
 
-        # Rename second image to image_YYYYMMDD.jpg
+        # Rename second image to nejm_{challenge_id}.jpg
         if len(extracted_files) >= 2:
             second_img_name, second_img_path = extracted_files[1]
-            new_img_name = f"image_{self.date_str}.jpg"
+            new_img_name = f"nejm_{self.challenge_id}.jpg"
             new_img_path = os.path.join(self.images_dir, new_img_name)
             os.rename(second_img_path, new_img_path)
-            print(f"Renamed {second_img_name} to {new_img_name}")
             # Store relative path
             self.image_path = os.path.join("images", new_img_name)
-
-        print(f"\nImages saved in: {self.images_dir}")
 
     def get_json(self) -> Dict[str, Any]:
         """
@@ -322,16 +313,12 @@ class NEJMDownloader:
         Returns:
             Dictionary with JSON output
         """
-        print("=" * 60)
-        print(f"NEJM Challenge Downloader - Challenge ID: {self.challenge_id}")
-        print("=" * 60)
+        print(f"NEJM-Challenge: {self.challenge_id}")
 
         # Download questions
-        print("\n[1/2] Downloading questions...")
         self.download_questions()
 
         # Download images
-        print("\n[2/2] Downloading images...")
         self.download_images()
 
         return self.get_json()
