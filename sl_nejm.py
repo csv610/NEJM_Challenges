@@ -56,9 +56,10 @@ def image_to_base64(image_path):
         return None
 
 # Query GPT
-def query_gpt(question, options, image_path, model):
-#    prompt = generate_prompt(question, options)
-    prompt  = question + "Options: " + options
+def query_gpt(question, options_dict, image_path, model):
+    # Convert options dict to list for prompt generation
+    options_list = [option for option in options_dict.values()] if isinstance(options_dict, dict) else options_dict
+    prompt = generate_prompt(question, options_list)
     print(prompt)
     image_base64 = image_to_base64(image_path)
     if not image_base64:
@@ -147,18 +148,25 @@ def display_gpt_response(response):
 
 # Display question
 def display_question(question, full_image=False, image_width=800):
-    st.write(f"**Date:** {question.get('Date', 'N/A')}")
-    st.write(f"**Question:** {question.get('Question', 'N/A')}")
+    st.write(f"**Date:** {question.get('date', 'N/A')}")
+    st.write(f"**Question:** {question.get('question', 'N/A')}")
     st.write("**Options:**")
-    for i, option in enumerate(question.get('Options', []), start=1):
-        st.write(f"({chr(64 + i)}) {option}")
-    st.write(f"**Answer:** {question.get('Answer', 'N/A')}")
+    options_dict = question.get('options', {})
+    if isinstance(options_dict, dict):
+        for key, option in options_dict.items():
+            st.write(f"({key}) {option}")
+    else:
+        for i, option in enumerate(options_dict, start=1):
+            st.write(f"({chr(64 + i)}) {option}")
+    st.write(f"**Answer:** {question.get('answer', 'N/A')}")
     
-    image_path = question.get('Image', None)
+    image_path = question.get('image', None)
     if image_path and os.path.exists(image_path):
         try:
-            st.image(image_path, caption=f"Image: {os.path.basename(image_path)}", 
-                     use_column_width=full_image, width=None if full_image else image_width)
+            img = Image.open(image_path)
+            width, height = img.size
+            st.image(image_path, caption=f"Image: {os.path.basename(image_path)} ({width}x{height})",
+                     width="stretch" if full_image else image_width)
         except Exception as e:
             st.error(f"Error displaying image: {str(e)}")
     else:
@@ -208,9 +216,9 @@ def main():
     st.sidebar.write(f"Question {question_index + 1} of {total_questions}")
     
     if st.sidebar.button("Ask VLM"):
-        question_text = current_question.get('Question', None)
-        options = current_question.get('Options', [])
-        image_path = current_question.get('Image', None)
+        question_text = current_question.get('question', None)
+        options = current_question.get('options', {})
+        image_path = current_question.get('image', None)
         
         if question_text and options and image_path and os.path.exists(image_path):
             with st.spinner("Querying GPT Vision..."):
