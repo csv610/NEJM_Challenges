@@ -13,6 +13,7 @@ Usage:
 import argparse
 import json
 import os
+import time
 from datetime import datetime, timedelta
 from typing import List, Tuple, Optional
 from nejm_downloader import NEJMDownloader
@@ -191,9 +192,14 @@ def batch_download(dates: List[datetime], output_file: str = "nejm_questions.jso
     skipped = 0
     for challenge_id in challenge_ids:
         if challenge_id in existing_data_lookup:
-            skipped += 1
+            # Check if image exists in the data
+            existing = existing_data_lookup[challenge_id]
+            if existing.get("image"):  # Image is present and not None/empty
+                skipped += 1
+            else:
+                to_download.append(challenge_id)  # Image missing, re-download
         else:
-            to_download.append(challenge_id)
+            to_download.append(challenge_id)  # Not in existing data, download
 
     # Process downloads silently
     for challenge_id in to_download:
@@ -204,6 +210,7 @@ def batch_download(dates: List[datetime], output_file: str = "nejm_questions.jso
             # Merge with existing data if available
             merged = merge_challenge_data(downloaded, existing_data_lookup)
             new_challenges.append(merged)
+            time.sleep(1)
 
     if not new_challenges:
         print("\nNo new challenges downloaded.")
