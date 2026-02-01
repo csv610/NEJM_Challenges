@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "total_images": 1049,
+    "total_images": 1057,
     "model": "ollama/gemma3",
     "images_folder": "images"
   },
@@ -9444,6 +9444,78 @@
         "classification": "Radiology",
         "abnormality": "Presence of a fracture in the distal radius.",
         "caption": "This is a lateral view of the left forearm and elbow. The image demonstrates a fracture of the distal radius. The distal radius is clearly fractured, with a displaced fragment. The articular surface of the radius is disrupted. The ulna appears relatively normal in this view. The head of the radius is displaced laterally. The distal fibula is visualized, appearing normal. The overall appearance suggests a fresh fracture. Further evaluation, including a CT scan, would be warranted to assess the extent of the fracture and plan for appropriate treatment."
+      }
+    },
+    {
+      "id": 1050,
+      "image": "images/nejm_20251211.jpg",
+      "response": {
+        "classification": "Dermatology",
+        "abnormality": "Erythematous, raised lesion on the face, likely representing a skin inflammatory reaction or potentially a dermatosis.",
+        "caption": "The image depicts a close-up view of a woman's face, with a prominent, raised, erythematous (red) lesion located on her cheek. The skin surrounding the lesion appears normal with age-related pigmentation and wrinkles. The lesion itself is approximately 1-2 cm in diameter and exhibits a well-defined, raised border. The color is predominantly red, indicating inflammation.  The skin texture around the lesion is normal.  The accompanying microscopic image shows a dense, inflamed dermis with a significant infiltration of neutrophils and lymphocytes. There is also evidence of vascular dilatation and edema within the dermis. The tissue architecture is disrupted by the inflammatory infiltrate.  This microscopic view strongly suggests an inflammatory dermatosis, such as eczema, psoriasis, or perhaps a localized allergic reaction. Further investigation and clinical correlation would be needed to determine the precise diagnosis."
+      }
+    },
+    {
+      "id": 1051,
+      "image": "images/nejm_20251218.jpg",
+      "response": {
+        "classification": "Obstetrics/Prenatal Imaging",
+        "abnormality": "Likely fetal hydrops and/or oligohydramnios",
+        "caption": "This is a three-view ultrasound image series likely depicting a fetus within the uterus. \n\n**Image 1:** This view shows a small, poorly defined fetal head with a markedly reduced amniotic fluid volume. The lack of clear anatomical detail suggests significant oligohydramnios (low amniotic fluid). The fetal head appears small, which could be associated with fetal growth restriction or other complications.\n\n**Image 2:** This view demonstrates a similar finding of reduced amniotic fluid. The fetal head is still poorly visualized, and the surrounding fluid is minimal. The absence of a well-defined fetal face is concerning.\n\n**Image 3:** This view shows a small fetal body with a severely reduced amniotic fluid volume. The fetal limbs are visible, but the overall image suggests a compromised fetal environment. The lack of surrounding fluid is a significant finding.\n\n**Overall Impression:** The combination of these images strongly suggests the presence of fetal hydrops (fluid accumulation) and/or oligohydramnios (low amniotic fluid). Fetal hydrops can be a serious condition associated with various fetal abnormalities, including cardiac defects, renal abnormalities, or chromosomal abnormalities. Further investigation, including detailed fetal biometry, cardiac evaluation, and potentially genetic testing, would be warranted to determine the underlying cause and guide management."
+      }
+    },
+    {
+      "id": 1052,
+      "image": "images/nejm_20251225.jpg",
+      "response": {
+        "classification": "Dermatology",
+        "abnormality": "Erythema with potential excoriation",
+        "caption": "The image depicts a section of a patient's abdomen. The skin is characterized by a fine, dense layer of facial hair. A prominent area of erythema (redness) is observed in the lower abdomen, extending approximately 5cm in diameter. The erythema appears irregular in shape and is centered around a small, dark-colored lesion, likely a scab or excoriation, located near the navel (belly button). The navel itself is visible and appears normal. The skin texture is generally smooth with visible skin folds and wrinkles consistent with abdominal fat distribution. There is no obvious swelling, masses, or other significant skin lesions noted in the field of view."
+      }
+    },
+    {
+      "id": 1053,
+      "image": "images/nejm_20260101.jpg",
+      "response": {
+        "classification": "Pediatrics / Neurology / Dermatology",
+        "abnormality": "Erythema (Redness) and Possible Subcutaneous Abscess",
+        "caption": "This image presents a newborn infant with a significant area of erythema (redness) localized to the left temple. The redness appears to be diffuse and inflamed.  Notably, there is a palpable mass or swelling present in the same area, indicated by the white arrow. This suggests a possible subcutaneous abscess or inflammatory process.  \n\nAlongside the clinical presentation, a head MRI is included. The MRI reveals the normal anatomy of the brain, including the cerebral hemispheres, lateral ventricles, and the third ventricle. The pineal gland is visible as a small, bright spot in the center of the third ventricle. The cerebellum is located at the posterior aspect of the brain. The brainstem is visible at the base of the brain. No acute abnormalities are immediately apparent on the MRI, but the presence of the palpable mass warrants further investigation to determine the underlying cause of the erythema and swelling.  The MRI does not show any obvious signs of infection or inflammation within the brain parenchyma itself, but the mass needs to be evaluated to rule out deeper infection or abscess formation."
+      }
+    },
+    {
+      "id": 1054,
+      "image": "images/nejm_20260108.jpg",
+      "response": {
+        "classification": "Dermatology",
+        "abnormality": "Erythema with Scale and Crusting",
+        "caption": "This image depicts both hands showing extensive, diffuse erythema with significant scale and crusting. The skin appears markedly inflamed and dry.  \n\n**Detailed Findings:**\n\n*   **General Appearance:** Both hands exhibit a uniform, generalized redness (erythema).\n*   **Scale:**  There is abundant, flaky scale present across the palms, backs of hands, and fingers. The scale is predominantly yellow-white in color.\n*   **Crusting:**  Small, dried crusts are visible, particularly on the dorsal surfaces of the hands and around the nail bases. These crusts suggest recent weeping or exudation.\n*   **Skin Texture:** The skin texture is markedly altered, appearing thickened and rough due to the scale.\n*   **Nails:** The nails appear normal in appearance, with no obvious signs of discoloration or damage. However, the surrounding skin shows evidence of inflammation.\n*   **Anatomical Structures:** The image clearly shows the palmar surface, dorsal surface, fingers, and hand joints. The distribution of the erythema and scale is widespread, affecting the entire hand surface.\n\n**Clinical Impression:** The presentation is highly suggestive of a chronic, inflammatory skin condition such as psoriasis, eczema (atopic dermatitis), or possibly a fungal infection. Further investigation, including a dermatological examination and potentially a skin biopsy, would be necessary to establish a definitive diagnosis."
+      }
+    },
+    {
+      "id": 1055,
+      "image": "images/nejm_20260115.jpg",
+      "response": {
+        "classification": "Dermatology",
+        "abnormality": "Erythematous macules and papules distributed across the chest and abdomen.",
+        "caption": "The image depicts a male patient's torso. The skin exhibits a widespread pattern of erythematous (red) macules and papules. These lesions are concentrated primarily on the upper chest and abdomen, with a more sparse distribution extending to the lower abdomen. The skin appears normal in the areolae of the breasts and around the sternum. The abdominal contour is visible, with a distinct linea alba. There are scattered fine wrinkles and lines of hairs across the torso. The overall appearance suggests a dermatological condition characterized by inflammation and localized skin eruptions. Further investigation would be needed to determine the specific etiology, such as eczema, psoriasis, or another inflammatory skin disorder."
+      }
+    },
+    {
+      "id": 1056,
+      "image": "images/nejm_20260122.jpg",
+      "response": {
+        "classification": "Dermatology",
+        "abnormality": "Possible skin lesion/mass on the medial aspect of the right knee.",
+        "caption": "This image shows the medial aspect of the right knee. There is a noticeable, rounded, pale-colored lesion present on the knee. The lesion appears to be located near the joint line. The skin surrounding the lesion is slightly reddened, suggesting inflammation or irritation. The image also shows the normal anatomical features of the knee, including the patella (kneecap) and the surrounding soft tissues. The background is a plain white wall, which provides a neutral backdrop for the examination."
+      }
+    },
+    {
+      "id": 1057,
+      "image": "images/nejm_20260129.jpg",
+      "response": {
+        "classification": "Dermatology",
+        "abnormality": "Significant inflammation and ulceration of the eyelids, likely related to a bacterial or fungal infection.",
+        "caption": "This image shows a close-up view of the left eye of an African male. There is extensive inflammation and ulceration of the upper and lower eyelids. The eyelids are markedly red and swollen, with a significant amount of purulent discharge and crusting present. The conjunctiva is also inflamed and appears hazy.  The corneal surface is visible beneath the inflammation, appearing cloudy and irregular.  There is evidence of significant tissue loss and ulceration, particularly around the inner canthus of the eye.  The skin surrounding the eyelids appears normal.  The overall presentation suggests a severe infection, possibly bacterial or fungal, affecting the eyelids and potentially extending to the cornea. Further investigation, including cultures and potentially a corneal biopsy, would be necessary to determine the exact etiology and guide appropriate treatment."
       }
     }
   ]

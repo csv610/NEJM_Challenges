@@ -224,7 +224,7 @@ def get_existing_caption(captions_data: Dict, question_id: str) -> Optional[Dict
 
 def generate_captions_for_images(
     images_folder: str = "images",
-    model: str = "gemini-3-flash",
+    model: str = "ollama/gemma3",
     output_file: Optional[str] = None,
     image_id: Optional[str] = None,
     image_id_range: Optional[tuple] = None
@@ -398,7 +398,7 @@ if __name__ == "__main__":
     parser.add_argument(
         '-m', '--model',
         type=str,
-        default='gemini-3-flash',
+        default='ollama/gemma3',
         help='LLM model to use for caption generation (default: gemini-3-flash)'
     )
     parser.add_argument(
