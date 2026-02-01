@@ -14628,5 +14628,126 @@
         },
         "image": "images/nejm_20251204.jpg",
         "answer": null
-    }
+    }, 
+{
+"id": 1050,
+"date": "December 11, 2025",
+"question": "A 72-year-old woman presented to the dermatology clinic with a 3.5-month history of an enlarging, painless lump on her left cheek. A punch biopsy showed dermal infiltration by small, round, blue cells arranged in nests, with scant cytoplasm and frequent mitoses. Immunohistochemical testing for perinuclear CK20 and synaptophysin was positive. Which of the following is the most likely diagnosis?",
+"options": {
+"A": "Basal cell carcinoma",
+"B": "Cutaneous angiosarcoma",
+"C": "Dermatofibroma",
+"D": "Merkel-cell carcinoma",
+"E": "Pyogenic granuloma"
+},
+"image": "images/nejm_20251211.jpg",
+"answer": null
+},
+{
+"id": 1051,
+"date": "December 18, 2025",
+"question": "A 6-month-old baby boy was referred to a pediatric neurology clinic in Brazil for evaluation of developmental delay. At the beginning of the second trimester, the baby’s mother had had a rash. At birth, the baby had microcephaly. He subsequently developed severe developmental delay and epilepsy. Prenatal ultrasonography at 12 weeks’ gestation and at 29 weeks’ gestation are shown. What is the underlying etiology?",
+"options": {
+"A": "Congenital cytomegalovirus",
+"B": "Congenital toxoplasmosis",
+"C": "Congenital Zika syndrome",
+"D": "Inborn error of metabolism",
+"E": "In utero toxin exposure"
+},
+"image": "images/nejm_20251218.jpg",
+"answer": null
+},
+{
+"id": 1052,
+"date": "December 25, 2025",
+"question": "An 80-year-old man presented with a 4-day history of a rash on his abdomen that first developed around his umbilicus and then gradually spread outward. Five days before the onset of the rash, the patient had been working in his garden. He had no associated fevers, chills, fatigue, or myalgias. Which of the following is the most likely diagnosis?",
+"options": {
+"A": "Cellulitis",
+"B": "Contact Dermatitis",
+"C": "Erythema migrans",
+"D": "Insect bite",
+"E": "Tinea Corporis"
+},
+"image": "images/nejm_20251225.jpg",
+"answer": null
+},
+{
+"id": 1053,
+"date": "January 01, 2026",
+"question": "A 5-week-old boy was brought in for evaluation of a painful lump on his scalp that had been present since birth. The otherwise healthy baby had been born at term. Ultrasonography of the lesion showed a subcutaneous structure of mixed echogenicity. Physical examination and magnetic resonance imaging of the head is shown. What is the most likely etiology of the lump?",
+"options": {
+"A": "Atretic cephalocele",
+"B": "Cephalohematoma",
+"C": "Dermoid cyst",
+"D": "Lipoma",
+"E": "Meningocele"
+},
+"image": "images/nejm_20260101.jpg",
+"answer": null
+},
+{
+"id": 1054,
+"date": "January 08, 2026",
+"question": "A 60-year-old man with a 30-pack-year smoking history presented to the dermatology clinic for a 2-year history of a painful rash on his palms and soles. Previous treatment with various antibacterial agents had been ineffective. Laboratory studies revealed neutrophilic leukocytosis and an elevated C-reactive protein level. What is the diagnosis?",
+"options": {
+"A": "Contact dermatitis",
+"B": "Dyshidrotic eczema",
+"C": "Palmoplantar plaque psoriasis",
+"D": "Palmoplantar pustulosis",
+"E": "Secondary syphilis"
+},
+"image": "images/nejm_20260108.jpg",
+"answer": null
+},
+{
+"id": 1055,
+"date": "January 15, 2026",
+"question": "A previously healthy 20-year-old man presented to the dermatology clinic with a 4-week history of an itchy rash on his upper chest and shoulders. Two months before presentation, he had started a carbohydrate-restricted ketogenic diet for weight loss. Physical examination is shown. Which of the following is the most likely diagnosis?",
+"options": {
+"A": "Confluent and reticulated papillomatosis",
+"B": "Contact dermatitis",
+"C": "Erythema dyschromicum perstans",
+"D": "Prurigo pigmentosa",
+"E": "Tinea corporis"
+},
+"image": "images/nejm_20260115.jpg",
+"answer": null
+},
+{
+"id": 1056,
+"date": "January 22, 2026",
+"question": "A 63-year-old woman with psoriatic arthritis involving her knees presented for evaluation of 9-months of pain in the left knee. Physical examination was notable for a nontender, palpable mass in the left popliteal fossa. Point-of-care musculoskeletal ultrasonography is shown. What is the most likely diagnosis?",
+"options": {
+"A": "Cruciate ligament cyst",
+"B": "Deep vein thrombosis",
+"C": "Pes anserine bursitis",
+"D": "Popliteal synovial cyst (Baker’s Cyst)",
+"E": "Pseudothrombophlebitis"
+},
+"image": "images/nejm_20260122.jpg",
+"answer": null
+},
+{
+"id": 1057,
+"date": "January 29, 2026",
+"question": "A 39-year-old woman with obesity presented to an ophthalmology clinic with a 6-week history of a foreign-body sensation and tearing in both eyes. Symptoms were worse upon awakening. She also reported daytime fatigue, snoring, and difficulty sleeping at night. Ophthalmologic examination and findings with attempted closure of both eyes are shown. What is the most appropriate next step?",
+"options": {
+"A": "Blepharoplasty",
+"B": "Computed tomography of the chest to look for a superior sulcus tumor",
+"C": "Ice pack test",
+"D": "Referral for a sleep study",
+"E": "Topical antimicrobials"
+},
+"image": "images/nejm_20260129.jpg",
+"answer": null
+}
+
+
+
+
+
+
+
+
+
 ]
